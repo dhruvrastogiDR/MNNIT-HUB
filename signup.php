@@ -134,8 +134,8 @@ mysqli_close($conn);
 <form action="" method="post">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Username</label>
-      <input type="text" class="form-control" name="username" id="inputEmail4" placeholder="Email">
+      <label for="text">Username</label>
+      <input type="text" class="form-control" name="username" id="text" placeholder="Email">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Password</label>
