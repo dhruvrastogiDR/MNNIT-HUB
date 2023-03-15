@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Community MNNIT HUB</title>
+  </head>
+  <body>
+    <h1>Welcome to Community of MNNIT HUB</h1>
+    <p>Here you can create communities.</p>
+
+    <button onclick="create_community()">Create Contact</button>
+
+    <div id="community-list">
+      <h2>Contact List</h2>
+      <button onclick="dofetchdata()">Show Communities : </button>
+      <ul>
+        <!-- Contacts will be added dynamically using JavaScript -->
+      </ul>
+    </div>
+
+    <script>
+      // Fetch the contacts data from the PHP script
+      function dofetchdata(){
+        fetch('get_communities.php')
+    .then(response => response.json())
+    .then(data => {
+      //testing and debugging 
+      console.log(data);
+    // Update the contact list on the page
+    const contactsList = document.getElementById('community-list');
+    contactsList.innerHTML = '';
+    data.forEach(contact => {
+      const contactElement = document.createElement('li');
+      const contactLink = document.createElement('a');
+      contactLink.href = `index.html?id=${contact.id}`;
+      contactLink.textContent = contact.name;
+      contactElement.appendChild(contactLink);
+      contactsList.appendChild(contactElement);
+    });
+  })
+  .catch(error => console.error(error));
+      }
+  
+
+    </script>
+
+    <script>
+        function create_community(){
+        window.location.href = "create_commmunity.html";
+        }
+    </script>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

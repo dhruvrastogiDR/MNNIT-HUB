@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Options</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Contact Options</h1>
+
+    <button onclick="">Briefing Timer</button>
+    <button onclick="markAttendance()">Attendance</button>
+    <button>Info</button>
+
+    <script>
+      // Get the contact name from the URL query string
+      var urlParams = new URLSearchParams(window.location.search);
+      var contactName = urlParams.get("name");
+
+      // Find the contact object in the contacts array
+      var contact = contacts.find(function(c) {
+        return c.name === contactName;
+      });
+
+      function startBriefingTimer() {
+        // TODO: Implement briefing timer functionality
+        alert("Starting briefing timer for " + contact.name);
+      }
+
+      function markAttendance() {
+        // TODO: Implement attendance marking functionality
+        alert("Marking attendance for " + contact.name);
+      }
+    </script>
+  </body>
+</html>

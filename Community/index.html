@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat App</title>
+  </head>
+  <body>
+    <h1>Welcome to Chat App</h1>
+    <p>Here you can create communities and chat with your friends.</p>
+
+    <button onclick="create_community()">Create Contact</button>
+
+    <div id="contact-list">
+      <h2>Contact List</h2>
+      <button onclick="dofetchdata()">Show Contacts : </button>
+      <ul>
+        <!-- Contacts will be added dynamically using JavaScript -->
+      </ul>
+    </div>
+
+    <script>
+      // Fetch the contacts data from the PHP script
+      function dofetchdata(){
+        fetch('get_contacts.php')
+    .then(response => response.json())
+    .then(data => {
+      //testing and debugging 
+      console.log(data);
+    // Update the contact list on the page
+    const contactsList = document.getElementById('contact-list');
+    contactsList.innerHTML = '';
+    data.forEach(contact => {
+      const contactElement = document.createElement('li');
+      const contactLink = document.createElement('a');
+      contactLink.href = `contact_options.html?id=${contact.id}`;
+      contactLink.textContent = contact.name + ' (' + contact.email + ')';
+      contactElement.appendChild(contactLink);
+      contactsList.appendChild(contactElement);
+    });
+  })
+  .catch(error => console.error(error));
+      }
+  
+
+    </script>
+
+    <script>
+        function create_community(){
+        window.location.href = "create_contact.html";
+        }
+    </script>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
