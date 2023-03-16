@@ -199,6 +199,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <button type="submit" class="btn btn-primary">Sign Up</button>
 </form>
 </div>
+    <div class="form-group">
+  <p>Already have an account? <a href="signin.php">Sign in</a></p>
+</div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
