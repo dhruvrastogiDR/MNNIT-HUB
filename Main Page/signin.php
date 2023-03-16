@@ -76,9 +76,41 @@ if(empty($err))
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>MNNIT HUB</title>
+    <title>MNNIT HUB | SIGN IN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@100&display=swap');
+        body{
+            background-color: bisque;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: black;
+        }
+        nav{
+            height: 8vh;
+            display: flex;
+        }
+        h3{
+        margin: 5vh;   
+        text-transform: uppercase; 
+        }
+        .form-control{
+            color: black;
+        }
+       nav ul li{
+        margin: 2vh;
+       }
+       .container{
+        width: 50%;
+       }
+       .btn{
+        width: 10vh;
+        height: 5vh;
+        margin-top: 2vh;
+       }
+    </style>
   </head>
   <body>
+    
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">MNNIT HUB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,11 +128,8 @@ if(empty($err))
         <a class="nav-link" href="signin.php">Sign-In</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
+        <a class="nav-link logout" href="logout.php">Logout</a>
       </li>
-
-      
-     
     </ul>
   </div>
 </nav>
