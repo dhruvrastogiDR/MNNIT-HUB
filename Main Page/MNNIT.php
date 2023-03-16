@@ -28,47 +28,103 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
         width: 60px;
         border-radius:10000px;
       }
+     
+      .nav-item{
+        align-items: flex-start;
+        display: flex;
+      }
+      #logout{
+        position:absolute;
+    top:0;
+    right:0;
+    margin-top:10px;
+    cursor:pointer;
+    margin-right:20px;
+    border-radius:10px;
+      }
+      .dropdown{
+        margin: 10px 10px;
+      }
+      .container{
+        background-color: bisque;
+      }
+      .jumbotron{
+        background-color: rgb(131, 163, 163) ;
+      }
+
+   
       </style>
 
 
     <title>MNNIT HUB!</title>
   </head>
   <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">MNNIT HUB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="signup.php">Sign-Up</a>
-      </li>
-      <li class="nav-item">
+    <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Community
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </div>
+             
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Hostel Management
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </div>
+      <!-- <li class="nav-item">
         <a class="nav-link" href="signin.php">Signin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
-      </li>
+      </li> --> <div class="dropdown">
+             <li class="nav-item">
+                 <a class="nav-link" href="#">Buy and Sell</a>
+               </li>
+               </div>
+               <div class="dropdown">
+              <li class="nav-item">
+                <a class="nav-link disabled">Trip Planner</a>
+               </li>
+               </div>
+              
+     
 
       
      
-    </ul>
+   
+  
 
   <div class="navbar-collapse collapse">
   <ul class="navbar-nav ml-auto">
-  <li class="nav-item active">
-        <a class="nav-link" href="#"> <img src="https://img.icons8.com/metro/26/000000/guest-male.png"> <?php echo "MNNITIAN ". $_SESSION['username']?></a>
+  <li class="nav-item">
+        <a class="nav-link" id="logout" href="logout.php"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+</svg></a>
       </li>
   </ul>
   </div>
 
 
   </div>
+  
 </nav>
+
 
 <div class="container mt-4">
 
@@ -141,11 +197,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
   </div>
 </div>
   
-</div>
-<h3><?php echo "Welcome ". $_SESSION['username']?>! You can now use this webssite</h3>
-<hr>
 
-</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
