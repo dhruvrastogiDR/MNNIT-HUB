@@ -199,7 +199,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <button type="submit" class="btn btn-primary">Sign Up</button>
 </form>
 </div>
-<div class="form-group">
+<div class="form-group"
+  style=
+  "display:flex;
+  align-items:center;
+  justify-content:center;"
+  >
   <p>Already have an account? <a href="signin.php">Sign in</a></p>
 </div>
 
