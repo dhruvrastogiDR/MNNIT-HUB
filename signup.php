@@ -147,19 +147,39 @@ mysqli_close($conn);
       <input type="password" class="form-control" name ="confirm_password" id="inputPassword" placeholder="Confirm Password">
     </div>
   <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="mnnitian@gmail.com">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="registration no.">Registration Number</label>
+      <input type="text" class="form-control" id="registration no.">
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">State</label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
-        <option>...</option>
+       <option>Uttar Pradesh</option>
+        <option>Delhi</option>
+        <option>Noida</option>
+        <option>Hyderabad</option>
+        <option>Rajasthan</option>
+        <option>Madhya Pradesh</option>
+        <option>Himachal Pradesh</option>
+        <option>Chattisgarh</option>
+        <option>Tamil Nadu</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Arunachal Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Mizoram</option>
+        <option>Manipur</option>
+        <option>Punjab</option>
+        <option>Haryana</option>
+        <option>Bihar</option>
+        <option>Jharkhand</option>
+        <option>Sikkim</option>
+        <option>Assam</option>
       </select>
     </div>
     <div class="form-group col-md-2">
@@ -175,7 +195,7 @@ mysqli_close($conn);
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
 </form>
 </div>
 
