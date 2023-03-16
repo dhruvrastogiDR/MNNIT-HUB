@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>community page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@100&display=swap');
+    
+
+
+body{
+font-family: 'Montserrat', sans-serif;
+background-color: #000000;
+color: #F8F9FA;
+display: flex;
+
+flex-direction: column;
+}
+.container{
+display: flex;
+flex-direction: row;
+}
+h1{
+text-transform:uppercase;
+font-size: 60px;
+margin: 5vh;
+font-weight: 600;
+-webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255,255,255,0.2) );
+transition: 0.5s;
+transition-property: all;
+}
+h1:hover{
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255,255,255,0.4) );
+}
+.btn{
+  background-color: #3DDC84;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: 0.5s;
+  transition-property: background-color;
+}
+.btn:hover{
+  background-color: #F8F9FA;
+  
+  color: #000000;
+}
+.lead, button, a{
+color: #F8F9FA;
+text-decoration: none;
+text-transform: uppercase;
+background-color: #073042;
+height: 50px;
+width: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.itemwrapper{
+display:flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+height: 45vh;
+}
+.item{
+
+width: 40vh;
+margin: 20px;
+margin-top: 20vh;
+}
+img{
+height: 25vh;
+}
+.slide{
+height: 40vh;
+width: 50vh;
+}
+h5{
+text-transform: uppercase;
+}
+.card{
+background-color: #073042;
+margin: 10vh;
+margin-top: 15vh;
+height: 30vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border: #F8F9FA solid 1px;
+transition: 0.5s;
+    transition-property: background-color , box-shadow ,transform,border-radius;
+}
+.card:hover{
+  background-color: #2E94E3;
+    box-shadow: 0 0 25px #2E94E3;
+    transform: translateY(-30px);
+}
+.card a{
+background-color: #3DDC84;
+}
+.carddisplay{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 2vh 3vh;
+  margin-left: 0;
+}
+.back{
+  background-color: #000000;
+  color: #F8F9FA;
+  font-size: large;
+  transition: all 0.3s ease 0s;
+    text-transform: uppercase;
+}
+.back:hover{
+  color: #3DDC84;
+}
+.create{
+  margin-left: 5vh;
+}
+.card h5{
+  margin-bottom: 13vh;
+  margin-top: 2vh;
+}
+
+</style> 
+</head>
+
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" class="back">HOME</a></li>
+      <li><a href="#" class="back">BACK</a></li>
+      <li><a href="#" class="back create">CREATE_COMMUNITY</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+        <h1 >Community Name</h1>
+        <p class="text">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Info</a>
+        </p>
+      </div>
+    </div>
+
+          <div class="carddisplay">
+          <div class="card" style="width: 18rem;">
+          
+            <div class="card-body">
+              <h5 class="card-title">Notes</h5>
+              <a href="C:\Users\Driti\Desktop\mnnithub\mhnotes\mhnotes.html" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Links</h5>
+              <a href="#" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Timer</h5>
+              <a href="#" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+        </div>
+
+        
+        </div>
+      </div>
+</body>
+</html>
