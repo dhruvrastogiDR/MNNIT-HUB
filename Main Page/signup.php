@@ -99,7 +99,38 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@100&display=swap');
+    body{
+        background-color: bisque;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        color: black;
+    }
+    nav{
+        height: 8vh;
+        display: flex;
+    }
+    h3{
+    margin: 5vh;   
+    text-transform: uppercase; 
+    }
+    .form-control{
+        color: black;
+    }
+   nav ul li{
+    margin: 2vh;
+   }
+   .container{
+    width: 50%;
+   }
+   .btn{
+    width: 10vh;
+    height: 5vh;
+    margin-top: 2vh;
+   }
+   
+</style>
 <title>MNNIT HUB</title>
 </head>
 <body>
@@ -132,6 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <div class="container mt-4">
 <h3>Please Sign-Up Here:</h3>
 <hr>
+
 <form action="" method="post">
 <div class="form-row">
 <div class="form-group col-md-6">
@@ -187,6 +219,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   <label for="inputZip">Phone</label>
   <input type="text" class="form-control" name="inputZip" id="inputZip">
 </div>
+
 </div>
 <div class="form-group">
 <div class="form-check">
