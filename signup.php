@@ -56,19 +56,28 @@ if(trim($_POST['password']) !=  trim($_POST['confirm_password'])){
     $password_err = "Passwords should match";
 }
 
+// defining the variables
+$email =$_POST["email"];
+$regi = $_POST["registration no."];
+$state = $_POST["inputState"];
+$phone = $_POST["inputZip"];
 
 // If there were no errors, go ahead and insert into the database
-if(empty($username_err) && empty($password_err) && empty($confirm_password_err))
+if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email) && empty($regi) && empty($state) && empty($phone))
 {
-    $sql = "INSERT INTO userse (username, password) VALUES (?, ?)";
+    $sql = "INSERT INTO userse (username, password, email, regno, state, phone) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
     if ($stmt)
     {
-        mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+        mysqli_stmt_bind_param($stmt, "ssssss", $param_username, $param_password,$param_email,$param_regi,$param_state,$param_phone);
 
         // Set these parameters
         $param_username = $username;
         $param_password = password_hash($password, PASSWORD_DEFAULT);
+        $param_email = $email;
+        $param_regi = $regi;
+        $param_phone = $phone;
+        $param_state = $state;
 
         // Try to execute the query
         if (mysqli_stmt_execute($stmt))
@@ -183,7 +192,7 @@ mysqli_close($conn);
       </select>
     </div>
     <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
+      <label for="inputZip">Phone</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
