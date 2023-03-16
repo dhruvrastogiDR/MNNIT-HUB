@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sell an Object Form</title>
+    <style>
+      /* CSS styles for form elements */
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"], input[type="file"], input[type="number"] {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .back{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top:5px;
+	margin-right: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+  }
+  *{
+    background-color: antiquewhite;
+  }
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+  </head>
+  <body>
+    <h1>Sell an Object Form</h1>
+    <form>
+      <label for="object-name">Object Name:</label>
+      <input type="text" id="object-name" name="object-name" required>
+
+      <label for="object-image">Object Image:</label>
+      <input type="file" id="object-image" name="object-image" accept="image/*" required>
+
+      <label for="object-price">Object Price:</label>
+      <input type="number" id="object-price" name="object-price" required>
+
+      <label for="object-info">Info:</label>
+      <input type="text" id="objec-info" name="object-info" required>
+       
+      <input type="submit" value="Sell">
+    </form>
+    <div class="back">
+        <button class="back" onclick="window.location.href='index1.html'">
+            <i class="fa-solid fa-2x fa-arrow-left"></i>
+        </button>
+    </div>
+    <script src="https://kit.fontawesome.com/7c8045b6c0.js" crossorigin="anonymous"></script>
+  </body>
+</html>
