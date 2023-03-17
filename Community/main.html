@@ -2,6 +2,33 @@
 <html>
   <head>
     <title>Community MNNIT HUB</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
+            margin: 7vh;
+        }
+        h1{
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+        button{
+            width: 20vh;
+            height: 5vh;
+            border-radius: 25px;
+            border: solid 1px;
+            transition: 0.5s;
+            transition-property: all;
+            text-transform: uppercase;
+        }
+        button:hover{
+            background-color: #000;
+            color: #fff;
+            border: #000;
+
+        }
+      </style>
   </head>
   <body>
     <h1>Welcome to Community of MNNIT HUB</h1>
@@ -11,7 +38,7 @@
 
     <div id="community-list">
       <h2>Contact List</h2>
-      <button onclick="dofetchdata()">Show Communities : </button>
+      <button onclick="dofetchdata()">Show Communities</button>
       <ul>
         <!-- Contacts will be added dynamically using JavaScript -->
       </ul>
