@@ -71,6 +71,13 @@
 *{
     background-color: antiquewhite;
 }
+	    a i {
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  a:hover i {
+	transform: translateY(-5px);
+  }
     </style>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
   </head>
@@ -95,9 +102,9 @@
       <input type="submit" value="Place Order">
     </form>
     <div class="back">
-        <button class="back" onclick="window.location.href='index1.html'">
+        <a class="back" onclick="window.location.href='index1.html'">
             <i class="fa-solid fa-2x fa-arrow-left"></i>
-        </button>
+        </a>
     </div>
     <script src="https://kit.fontawesome.com/7c8045b6c0.js" crossorigin="anonymous"></script>
   </body>
