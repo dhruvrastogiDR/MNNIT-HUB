@@ -1,9 +1,9 @@
 <?php
 // database connection details
 $host = "localhost";
-$username = "your-username";
-$password = "your-password";
-$dbname = "your-dbname";
+$username = "root";
+$password = "";
+$dbname = "buyandsell";
 
 // establish connection
 $conn = new mysqli($host, $username, $password, $dbname);
