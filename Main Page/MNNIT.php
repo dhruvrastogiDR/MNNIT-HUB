@@ -182,7 +182,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 			</ul>
 		</section>
 
-		<!-- Projects section -->
+<!-- 		<!-- Projects section -->qq -->
 		<section>
 			<h2>Projects</h2>
 			<ul>
