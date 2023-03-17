@@ -32,4 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // close connection
 $conn->close();
+
+header("Location: cart.html");
+exit();
+
 ?>
