@@ -182,7 +182,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 			</ul>
 		</section>
 
-<!-- 		<!-- Projects section -->qq -->
+		<!-- Projects section -->
 		<section>
 			<h2>Projects</h2>
 			<ul>
@@ -195,6 +195,11 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
       </ul>
     </div>
   </div>
+</div>
+
+<div>
+      <h2>Here we are going to add imporatant updated and the things that are imporatant to the user</h2>
+
 </div>
   
 
