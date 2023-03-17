@@ -21,7 +21,7 @@
 }
 
 .buy-now {
-	background-color: #af874c;
+	background-color: #15ae13;
 	color: white;
 	font-size: 16px;
 	padding: 10px 20px;
@@ -32,7 +32,7 @@
 }
 
 .buy-now:hover {
-	background-color:#5c3803;
+	background-color:#139211;
 }
 .back{
 	position: absolute;
@@ -73,7 +73,7 @@
      position: fixed;
 	 top: 6px;
      right: 10px;
-     background-color:#af874c;
+     background-color:#15ae13;
      color:white;
      padding: 12px 20px;
      border: none;
@@ -83,7 +83,7 @@
 	 
     }
 .sell-button:hover {
- background-color:#5c3803;
+ background-color:#139211;
 }
 .home{
 	position: absolute;
@@ -103,7 +103,7 @@
 }
 
 .info {
-	background-color: #af874c;
+	background-color: #15ae13;
 	color: white;
 	font-size: 16px;
 	padding: 10px 20px;
@@ -113,5 +113,12 @@
 	transition: background-color 0.3s ease;
 }
 .info:hover {
-	background-color:#5c3803;
+	background-color:#139211;
 }
+a i {
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  a:hover i {
+	transform: translateY(-5px);
+  }
