@@ -78,7 +78,7 @@ if(empty($err))
 
     <title>MNNIT HUB | SIGN IN</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@100&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
         body{
             background-color: bisque;
             font-family: 'Montserrat', sans-serif;
