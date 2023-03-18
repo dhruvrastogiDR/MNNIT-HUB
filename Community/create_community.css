@@ -1,0 +1,52 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin: 7vh;
+    background-color: bisque;
+    color: black;
+    display: flex;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 10vh;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: auto;
+}
+button{
+    height: 8vh;
+    width: 40vh;
+    border-radius: 50px;
+    background-color: black;
+    border: bisque solid 1px;
+    color: bisque;
+    margin:0 2vh;
+    transition: 0.5s;
+    transition-property: all;
+    text-transform: uppercase;
+    margin: 2vh;
+}
+button:hover{
+    background-color: bisque;
+    color: #000000;
+    border: #000000 solid 1px;
+}
+input{
+    height: 28px;
+    width: 500px;
+    display: grid;
+    
+       
+}
