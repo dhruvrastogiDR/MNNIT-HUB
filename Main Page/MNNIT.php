@@ -84,9 +84,9 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
                   Hostel Management
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Lost and found</a></li>
+                  <li><a class="dropdown-item" href="#">Laundary and Canteen Info</a></li>
+                  <li><a class="dropdown-item" href="#">Complaints</a></li>
                 </ul>
                 </div>
       <!-- <li class="nav-item">
