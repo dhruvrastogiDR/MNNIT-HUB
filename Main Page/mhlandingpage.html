@@ -5,20 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landing page</title>
-    <link rel="stylesheet" href="mhlandingpage.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@100&display=swap');
-        
-        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Edu+NSW+ACT+Foundation:wght@600&family=Pacifico&family=Varela+Round&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Edu+NSW+ACT+Foundation:wght@600&family=Merienda&family=Pacifico&family=Varela+Round&display=swap');
-       
-        body{
+      @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Cinzel&family=Julius+Sans+One&family=Source+Sans+Pro&display=swap');
+    body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F8F9FA;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 20pt;
+    background-color: #a1b6ca;
 }
 html{
     scroll-behavior: smooth;
@@ -35,7 +33,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
     text-transform: uppercase;
 }
 .logo{
@@ -43,43 +40,37 @@ header{
     height: 100px;
     width: 200px;
 }
-.nav_links{
-    list-style: none;
-}
-.nav_links li{
-    list-style: none;
-    display: inline-block;
-    padding: 0px 20px;
-}
-.nav_links li a{
-    transition: all 0.3s ease 0s;
-    text-transform: uppercase;
-}
-.nav_links li a:hover{
-    color: #3DDC84;
-}
 .login{
     padding: 9px 25px;
-    background-color: #3DDC84;
-    color: #F8F9FA;
     border: none;
-    border-radius: 50px;
     cursor: pointer;
+    background-color: #a1b6ca;
+    border-radius: 30px;
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
     transition: all 0.3s ease 0s;
+    
 }
 .login:hover{
-    background-color: #3DDC84;
-    box-shadow: #3DDC84 ;
+    background-color: #F8F9FA;
+    
 }
 .signup{
     padding: 9px 25px;
     border: none;
     cursor: pointer;
+    background-color: #a1b6ca;
+    border-radius: 30px;
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: all 0.3s ease 0s;
+}
+.signup:hover{
     background-color: #F8F9FA;
+   
 }
 /*main*/
 .main_wrapper{
-    background-color: #000000;
     height: 90vh;
     display: flex;
     flex-direction: row;
@@ -87,120 +78,124 @@ header{
     overflow: hidden;
     margin-left: 0;
     margin-right: 0;
+    background-color: #a1b6ca;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+#get_started{
+    width:200px;
+    padding:10px 10px;
+    margin-top:14px;
+    border: none;
+    cursor: pointer;
+    background-color: #F8F9FA;
+    border-radius: 30px;
+    color: #a1b6ca;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bolder;
+    transition: all 0.3s ease 0s;
+}
+#get_started:hover{
+    width: 300px;
 }
 h1{
-    color: #F8F9FA;
-    background-color: #000000;
-    font-size: 80px;
-    margin-top: 20vh;
+    color: #000000;
+    font-family: 'Edu NSW ACT Foundation', 'cursive';
+    font-size: 100pt;
+    margin-top: 10vh;
     text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: all;
+}
+h1:hover{
+    transform: translateX(30px);
+    font-size: 110pt;
+ 
 }
 .text{
     display: flex;
     flex-direction: column;
-    background-color: #000000;
-    color: #F8F9FA;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #000000;
     width: 50%;
+
 }
 h2{
-    background-color: #000000;
-    color: #F8F9FA;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #000000;
+    font-size: 24pt;
 }
 .tutorial{
     width: 50%;
     height: auto;
     margin: 10vh;
 }
-.mnnithub{
-    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255,255,255,0.2) );
-    margin-bottom: 40px;
-    font-family: 'Edu NSW ACT Foundation', 'cursive';
-}
-
-#title{
-    font-family: 'Merienda', cursive;
+#title{ 
     margin-bottom: 38px;
-    color:antiquewhite;
+    color:#000000;
+}
+.go{
+    background-color: #F8F9FA;
+    color: #000000;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    font-size: 2px;
+    overflow: hidden;
 }
 /*features page */
 .feature_wrapper{
     display: flex;
-    flex-direction: column;
-    background-color: #F8F9FA;
-    width: 100%;
+    flex-direction: row;
+    background-color: #b3a792;
+   width: 100%;
     height: 90vh;
-    margin: 2px;
+    justify-content: space-around;
+    align-content: center; 
 }
 .feature{
     display: flex;
     flex-direction: column;
     height: 40vh;
     width: 40vh;
-    background-color: #073042;
-    border-radius: 10px;
+    border: #F8F9FA solid 2px;
     color: #F8F9FA;
-    margin-top: 10vh;
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin: auto;
     padding: 5vh;
+    transition: 0.5s;
+    transition-property: all;
 }
-.feature,#feat{
-    width: 60%;
-    align-self: center;
+.feature:hover{
+    
+  background-color: #F8F9FA;
+    box-shadow: 0 0 25px #F8F9FA;
+    transform: translateY(-30px);
+    color: #000000;
 }
 h3{
     text-transform: uppercase;
-    background-color: #073042;
-    color: #F8F9FA;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    padding: 8px;
+    margin-bottom: 7vh;
+}
+.feature ul li{   
     font-size: 25px;
     font-weight: lighter;
-    padding: 8px;
-}
-
-.one{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.two{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.three{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.feature ul li{
-    color: #F8F9FA;
-    font-size: 20px;
     padding: 10px;
 }
-/*
-.feature{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-*/
 
 /*footer*/
 .footer{
-   
-    background-color: rgba(0, 0, 0);
-    color: #F8F9FA;
-    height: 20vh;
+    background-color: #F8F9FA;
+    
+    height: 10vh;
     display: flex;
     flex-direction: column;
     padding: 20px 50px;
-    margin-top: 10vh;
     bottom: 10px;
 }
 .social{
@@ -214,7 +209,7 @@ h3{
 .social li{
     display: inline-block;
     list-style: none;
-    color: #F8F9FA;
+    color: #000000;
     text-transform: capitalize;
 }
 .social li a{
@@ -224,16 +219,6 @@ h3{
     transition: 0.5s;
     
 }
-#get_started{
-    width:200px;
-    padding:10px 10px;
-    margin-top:14px;
-    color:antiquewhite;
-    font-weight:bold;
-
-
-}
-
 
       </style>
 </head>
@@ -241,33 +226,24 @@ h3{
     <!-- navbar-->
     <header>
         <img src="Images/mnnithublogo2.png" alt="logo" class="logo">
-        <nav>
-            <ul class="nav_links">
-                <li><a href="signup.php">GET STARTED</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Tutorial</a></li>
-                <li><a href="#feature">Features</a></li>
-            </ul>
-            
-        </nav>
+       
         <div class="buttons">
         <a href="C:\Users\Driti\Desktop\mnnithub\mhsignuppage\mhsignuppage.html" class="cta"><button class="signup">Sign up</button></a>
         <a href="#" class="cta"><button class="login">Login</button></a>
     </div>
     </header>
    <!--main-->
+   
    <div class="main_wrapper">
     <div class="text">
         <h1 class="mnnithub">mnnit hub</h1>
-        <h2 id="title">Explore your college, its communities. Get connect with your college mates. Build your own profile and present yourself to the college And Much more... </h2>
+        <h2 id="title">Explore your college and its communities. Connect with your peers. Build your profile, present yourself to the college and much more... </h2>
         <a class="btn btn-primary" id="get_started" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-            <h5>Get Started</h5>
+            <h5>Get Started!</h5>
           </a>
     </div>
     <div class="tutorial">
         <!--insert tutorial video here-->
-       
-        
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -294,58 +270,33 @@ h3{
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-       
-          
     </div>
+    
    </div>
+   
+
 
    <!--features page-->
    
    <div class="feature_wrapper" id="feature">
-    <div class="one">
     <div class="feature">
         <h3>community</h3>
-        <ul>
-            <li>join and create communities and subcommunities</li>
-            <li>keep up with updates and notes</li>
-            <li>keep track of briefing timings and attendance</li>
-            <li>real time chatting</li>
-        </ul>
+        <h4>Join and create communities and subcommunities.</h4>
     </div>
     <div class="feature">
         <h3>hostel</h3>
-        <ul>
-            <li>lost and found</li>
-            <li>information at your fingertips</li>
-            <li>help desk</li>
-            <li>complaint register</li>
-
-        </ul>
+        <h4>Information at your fingertips.</h4>
     </div>
-</div>
-<div class="two">
     <div class="feature" index="feat">
-        <h3>olx</h3>
+        <h3>Buy and sell</h3>
+        <h4></h4>
     </div>
     <div class="feature" index="feat">
         <h3>trip planner</h3>
+        <h4></h4>
     </div>
 </div>
-<div class="three">
-    <div class="feature">
-        <h3>points</h3>
-        <ul>
-            <li>earn points as you interact more</li>
-        </ul>
-    </div>
-    <div class="feature" >
-        <h3>profile system</h3>
-        <ul>
-            <li>multiple sub-profiles</li>
-            <li>discover new people and communities with tags</li>
-        </ul>
-    </div>
-</div>
+
    
    <!--footer-->
 
@@ -356,7 +307,7 @@ h3{
         <li><a href="#"></a>link</li>
     </ul>
 </div>
-</div>
+
  <script defer src="mhlandingpage.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
