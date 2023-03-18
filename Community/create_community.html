@@ -2,17 +2,25 @@
 <html>
 <head>
 	<title>Create New Community</title>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        </style>
+		<link rel="stylesheet" href="create_community.css">
 </head>
 <body>
-	<h1>Create New Community</h1>
+	<div class="container">
+		<h1>Create New Community</h1>
 	<form action="add_community.php" method="post">
-		<label for="name">Name:</label>
+		<label for="name">Name</label>
 		<input type="text" id="name" name="name" required><br>
 
-		<label for="data">Info:</label>
+		<label for="data">Information </label>
 		<input type="text" id="text" name="text" ><br>
 
-		<button type="submit">Create Community</button>
+		<div class="btn">
+			<button type="submit">Create Community</button>
+		</div>
 	</form>
+	</div>
 </body>
 </html>
