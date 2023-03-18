@@ -47,32 +47,33 @@
     <script>
       // Fetch the contacts data from the PHP script
       function dofetchdata(){
-        fetch('get_communities.php')
+  fetch('get_communities.php')
     .then(response => response.json())
     .then(data => {
       //testing and debugging 
       console.log(data);
-    // Update the contact list on the page
-    const contactsList = document.getElementById('community-list');
-    contactsList.innerHTML = '';
-    data.forEach(contact => {
-      const contactElement = document.createElement('li');
-      const contactLink = document.createElement('a');
-      contactLink.href = `index.html?id=${contact.id}`;
-      contactLink.textContent = contact.name;
-      contactElement.appendChild(contactLink);
-      contactsList.appendChild(contactElement);
-    });
-  })
-  .catch(error => console.error(error));
-      }
+      // Update the contact list on the page
+      const contactsList = document.getElementById('community-list');
+      contactsList.innerHTML = '';
+      data.forEach(contact => {
+        const contactElement = document.createElement('li');
+        const contactLink = document.createElement('a');
+        contactLink.href = `mhcommpage.html?id=${contact.id}&name=${encodeURIComponent(contact.Tables_in_mnnithub)}`;
+        contactLink.textContent = contact.Tables_in_mnnithub;
+        contactElement.appendChild(contactLink);
+        contactsList.appendChild(contactElement);
+      });
+    })
+    .catch(error => console.error(error));
+}
+
   
 
     </script>
 
     <script>
         function create_community(){
-        window.location.href = "create_commmunity.html";
+        window.location.href = "create_community.html";
         }
     </script>
     <!-- <script src="script.js"></script> -->
