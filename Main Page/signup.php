@@ -100,40 +100,66 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
-   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-    body{
-        background-color: bisque;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        color: black;
-    }
-    nav{
-        height: 8vh;
-        display: flex;
-    }
-    h3{
-    margin: 5vh;   
-    text-transform: uppercase; 
-    }
-    .form-control{
-        color: black;
-    }
-   nav ul li{
-    margin: 2vh;
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+   body{
+       background-color: bisque;
+       font-family: 'Montserrat', sans-serif;
+       font-size: 16pt;
+       color: rgb(255, 255, 255);
    }
-   .container{
-    width: 50%;
+   nav{
+       height: 8vh;
+       display: flex;
    }
-   .btn{
-    width: 10vh;
-    height: 5vh;
-    margin-top: 2vh;
+   h3{
+   margin: 5vh;   
+   text-transform: uppercase; 
    }
-   
+   .form-control{
+       color: black;
+   }
+  nav ul li{
+   margin: 2vh;
+  }
+  .container{
+   width: 50%;
+   height: 80vh;
+   background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   flex-direction: column;
+  }
+  .btn{
+   width: 20vh;
+   height: 5vh;
+   margin-top: 2vh;
+   background-color: rgba(255, 255, 255, 0.2);
+   border-radius: 20px;
+   border: none;
+   justify-self: center;
+   align-self: center;
+   transition: 0.5s all;
+  }
+  .btn:hover{
+   background-color: rgba(255, 255, 255, 0.5);
+
+  }
+  .backvideo{
+position: absolute;
+right: 0;
+bottom: 0;
+z-index: -1;
+   }
+  textarea{
+  width: 60vh;
+   }
 </style>
-<title>MNNIT HUB</title>
+<title>MNNIT HUB | SIGN UP</title>
 </head>
 <body>
+  <video autoplay loop muted plays-inline class="backvideo">
+    <source src="C:\Users\Driti\Downloads\waves-71122.mp4" type="video/mp4">
+</video>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <a class="navbar-brand" href="#">MNNIT HUB</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
