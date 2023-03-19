@@ -61,22 +61,18 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
   <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">MNNIT HUB</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="MNNIT.php">MNNIT HUB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
     <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" onclick="openCommunityPage()" aria-expanded="false">
                   Community
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
                 </div>
              
               <div class="dropdown">
@@ -93,7 +89,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
         <a class="nav-link" href="signin.php">Signin</a>
       </li> --> <div class="dropdown">
              <li class="nav-item">
-                 <a class="nav-link" href="#">Buy and Sell</a>
+                 <a class="nav-link" onclick="openBuyAndSell()">Buy and Sell</a>
                </li>
                </div>
                <div class="dropdown">
@@ -136,7 +132,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
   <!-- <p class="lead">
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </p> -->
-  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" onclick="showDataProfile()" role="button" aria-controls="offcanvasExample">
   MY Profile
 </a>
 <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -148,10 +144,11 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
     <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/> -->
  <!-- </svg> -->
- <img src="image/me_and_dr.jpg" alt="Profile Picture" id="profile"><h2><?php echo  $_SESSION['username']?></h2>  </h5> 
+ <img src="Images/me_and_dr.jpg" alt="Profile Picture" id="profile"><h2><?php echo  $_SESSION['username']?></h2>  </h5> 
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body" id="offcanvas-body">
+  <?php include 'showData.php'; ?>
     <!-- <div>
       Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
     </div>
@@ -163,13 +160,13 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
         <li><a class="dropdown-item" href="#">Action</a></li>
         <li><a class="dropdown-item" href="#">Another action</a></li>
         <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-        <section>
-			<!-- <img src="me_and_dr.jpg" alt="Profile Picture" id="profile"> -->
-			<!-- <h2>Himanshu</h2> -->
+        <!-- <section>
+			<img src="me_and_dr.jpg" alt="Profile Picture" id="profile"> -->
+			<!-- <h2>Himanshu</h2>
 			<p> <h5> EMAIL: </h5> mnnit@gmail.com  </p>
 			<p>Location: PRAYAGRAJ,UP</p>
 			<p>About Me: I'm a student persuing BTECH in CSE at MNNIT ALLLAHABAD.</p>
-		</section>
+		</section> -->
 
 		<!-- Skills section -->
 		<section>
@@ -182,9 +179,8 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 			</ul>
 		</section>
 
-		<!-- Projects section -->
 		<section>
-			<h2>Projects</h2>
+			<h2>Info</h2>
 			<ul>
 				<li><a href="#">Commmunity 1</a></li>
 				<li><a href="#">Community 2</a></li>
@@ -196,13 +192,35 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
     </div>
   </div>
 </div>
-
 <div>
       <h2>Here we are going to add imporatant updated and the things that are imporatant to the user</h2>
 
 </div>
-  
 
+
+<script>
+  function openBuyAndSell(){
+          window.open('../Buy and Sell/index1.html');
+        }
+</script>
+
+      <script>
+        function openCommunityPage(){
+          window.open('../Community/main.html');
+        }
+        </script>
+
+      <script>
+
+        function showDataProfile(){
+          // Select the element where the products will be displayed
+        const productsContainer = document.querySelector('#offcanvas-body');
+
+        // Insert the products HTML code into the page
+        productsContainer.innerHTML = '<?php echo $details_html; ?>';
+        }
+
+      </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
