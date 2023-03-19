@@ -123,24 +123,7 @@ a i {
   a:hover i {
 	transform: translateY(-5px);
   }
-  .cart-button {
-	margin-right:230px;
-     position: fixed;
-	 top: 6px;
-     right: 10px;
-     background-color:#157cc1;
-     color:white;
-     padding: 12px 20px;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     font-size: 20px;
-	 transition: background-color 0.3s ease;
-    }
-.cart-button:hover {
- background-color:#365fc5;
-}
-.cart{
+.order{
 position: absolute;
 top: 0;
 right: 0;
