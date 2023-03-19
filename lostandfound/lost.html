@@ -4,28 +4,49 @@
     <title>Sell an Object Form</title>
     <style>
       /* CSS styles for form elements */
+      body{
+        background-color: #a1b6ca;
+            font-family: 'Montserrat', sans-serif;
+            color: #F8F9FA;
+            display: flex;
+            flex-direction: column;
+      }
+      .container{
+        background-color: rgb(0, 0, 0,0.5);
+        height: 75vh;
+        width: 60%;
+        justify-self: center;
+        align-self: center;
+        padding: 5vh;
+        
+      }
       label {
         display: block;
         margin-bottom: 10px;
       }
       input[type="text"], input[type="file"], input[type="tel"] {
         margin-bottom: 10px;
-        width: 100%;
+        width: 85%;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
       }
       input[type="submit"] {
-        background-color: #1370ae;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        background-color: transparent;
+	color: white;
+    margin-top: 5vh;
+    height: 50px;
+    width: 200px;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: #a1b6ca solid 1px;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
       }
       input[type="submit"]:hover {
-        background-color: #113692;
+        background-color:#a1b6ca;
       }
       .back{
 	position: absolute;
@@ -36,13 +57,9 @@
 	border-radius: 10px;
 	cursor: pointer;
   }
-  *{
-    background-color: rgb(215, 245, 250);
-  }
   a i {
   transition: transform 0.2s ease-in-out;
 }
-
 a:hover i {
   transform: translateY(-5px);
 }
@@ -51,19 +68,21 @@ a:hover i {
   </head>
   <body>
     <h1>LOST SOMETHING?</h1>
+    <div class="container">
+        
     <h2>Enter details of the lost item</h2>
     <form>
 
       <label for="Item-image">Item Image:</label>
       <input type="file" id="Item-image" name="Item-image" accept="image/*" required>
 
-      <label for="place">Place where it was lost:</label>
+      <label for="place">Location it was lost:</label>
       <input type="text" id="place" name="place" required>
 
-      <label for="contact">phone:</label>
+      <label for="contact">Phone:</label>
       <input type="tel" id="phone" name="phone" required>
 
-      <label for="object-info">Info:</label>
+      <label for="object-info">Description:</label>
       <input type="text" id="objec-info" name="object-info" required>
        
       <input type="submit" value="SUBMIT">
@@ -72,6 +91,7 @@ a:hover i {
         <a class="back" onclick="window.location.href='lostandfound.html'">
             <i class="fa-solid fa-2x fa-arrow-left"></i>
         </a>
+    </div>
     </div>
     <script src="https://kit.fontawesome.com/7c8045b6c0.js" crossorigin="anonymous"></script>
   </body>
