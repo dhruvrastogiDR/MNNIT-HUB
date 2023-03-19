@@ -79,11 +79,12 @@ if(empty($err))
     <title>MNNIT HUB | SIGN IN</title>
     <style>
        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
         body{
             background-color: bisque;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            color: black;
+            font-size: 16pt;
+            color: rgb(255, 255, 255);
         }
         nav{
             height: 8vh;
@@ -101,16 +102,41 @@ if(empty($err))
        }
        .container{
         width: 50%;
+        height: 80vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
        }
        .btn{
-        width: 10vh;
+        width: 20vh;
         height: 5vh;
         margin-top: 2vh;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        border: none;
+        justify-self: center;
+        align-self: center;
+        transition: 0.5s all;
        }
+       .btn:hover{
+        background-color: rgba(255, 255, 255, 0.5);
+
+       }
+       .backvideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+        }
+       textarea{
+       width: 60vh;
+        }
     </style>
   </head>
   <body>
-    
+    <video autoplay loop muted plays-inline class="backvideo">
+      <source src="C:\Users\Driti\Downloads\waves-71122.mp4" type="video/mp4">
+  </video>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">MNNIT HUB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
