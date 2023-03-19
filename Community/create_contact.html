@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Create New Contact</title>
+<head>
+	<title>MNNIT HUB | CREATE CONTACT</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-    </style>
-    <link rel="stylesheet" href="create_contact.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Create New Contact</h1>
-      <form action="add_contact.php" method="post">
-        <div class="box">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required placeholder="Advait" /><br />
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        </style>
+        <link rel="stylesheet" href="create_contact.css">
+</head>
+<body>
+	<video autoplay loop muted plays-inline class="backvideo">
+		<source src="C:\Users\Driti\Downloads\sea-6399.mp4" type="video/mp4">
+	</video>
+	<div class="container">
+        <h1>Create New Contact</h1>
+	<form action="add_contact.php" method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="mnnitian@gamil.com" required /><br />
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br>
 
-          <label for="phone-no. ">Phone:</label>
-          <input type="tel" id="phone" name="phone" required  placeholder="123456789"/><br />
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" required><br>
 
-          <div class="btn">
+		<div class="btn">
             <button type="submit">Create Contact</button>
-          </div>
         </div>
-      </form>
+	</form>
     </div>
-  </body>
+</body>
 </html>
