@@ -1,27 +1,31 @@
 body{
     
     font-size: 40px;
-    background-color: #a1b6ca;
+    background-color:#a1b6ca;
     color: #F8F9FA;
     display: flex;
 }
+.bgimg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.4;
+}
 .container{
-    height: 88vh;
-    width: 60%;
-    border-radius: 10px;
-    background-color: #b3a792;
+    height: 95vh;
+    width: 50%;
+    border: #F8F9FA solid 1px;
+    background-color: rgb(0, 0, 0,0.7);
     display: flex;
     flex-direction: column;
     margin: auto;
-    
     align-items: center;
-    transition: 0.5s ease;
-    transition-property: all;
-}
-.container:hover{
-    border-radius: 50%;
-    width: 88vh;
-    border: #F8F9FA double 5px;
+    justify-self: center;
+    align-self: center;
+    backdrop-filter: blur(10px);
 }
 .time{
     font-size: 80px;
@@ -45,7 +49,7 @@ button{
     height: 10vh;
     width: 35vh;
     border-radius: 50px;
-    background-color: #b3a792;
+    background-color: transparent;
     border: #F8F9FA solid 1px;
     font-size: 20px;
     font-weight: bold;
