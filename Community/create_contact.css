@@ -13,6 +13,14 @@ body{
     justify-content: center;
     align-items: center;
 }
+.box{
+    width: 550px;
+  height: 400px;
+  padding: 15px;
+  background-color: rgb(66, 134, 143);
+  box-shadow: 10px 10px ;
+    
+}
 h1{
     font-size: 50px;
     text-transform: uppercase;
@@ -30,8 +38,8 @@ button{
     width: 40vh;
     border-radius: 50px;
     background-color: black;
-    border: bisque solid 1px;
-    color: bisque;
+    border: rgb(199, 243, 185) solid 1px;
+    color: rgb(137, 211, 221);
     margin:0 2vh;
     transition: 0.5s;
     transition-property: all;
@@ -47,8 +55,16 @@ button:hover{
 }
 input{
     height: 28px;
-    width: 500px;
+    width: 350px;
     display: grid;
+    font-size: 20px;
     
        
+}
+input[type=tel] {
+    width:42%;
+}
+.container ::placeholder{
+    font-size: 20px;
+    padding-left: 4px;
 }
