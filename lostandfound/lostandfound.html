@@ -1,95 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Products</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
-</head>
-<body>
-    <div class="title">
-        <h2>LOST AND FOUND</h2>
+  <head>
+    <title>Buy Product Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      /* CSS styles for the form */
+      
+      body{
+        background-color: #a1b6ca;
+            font-family: 'Montserrat', sans-serif;
+            color: #F8F9FA;
+            display: flex;
+            flex-direction: column;
+      }
+      .container{
+        background-color: rgb(0, 0, 0,0.5);
+        height: 80vh;
+        width: 60%;
+        justify-self: center;
+        align-self: center;
+      }
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        
+        border-radius: 4px;
+      }
+      
+      label {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      input[type=text],
+      input[type=email],
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 0.5px solid #000;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        resize: vertical;
+      }
+      input[type=number] {
+        width: 50%;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      input[type="submit"] {
+        background-color: transparent;
+	color: white;
+    margin-top: 5vh;
+    height: 50px;
+    width: 200px;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: #a1b6ca solid 1px;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color:#a1b6ca;
+      }
+      .back{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top:5px;
+	margin-right: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+      }
+      h1{
+        margin-left:30px;
+        
+      }
+      h2{
+    margin-left: 30px;
+}
+a i {
+	transition: transform 0.2s ease-in-out;
+  }
+  a:hover i {
+	transform: translateY(-5px);
+  }
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+  </head>
+  <body>
+    <h1>FOUND THE ITEM?</h1>
+   <div class="container">
+    
+    <h2>Enter your details</h2>
+    
+    <form action="process_order.php" method="POST">
+        <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" name="full-name" required>
+      <br><br>
+      <label for="room no.">Room No.</label>
+      <input type="tel" id="room no." name="room no." required>
+      <br><br>
+      <label for="phone-no.">Phone:</label>
+      <input type="tel" id="phone-no" name="phone-no" required>
+      <br><br>
+      <br>
+      <input type="submit" value="Found">
+    </form>
+   </div>
+    <div class="back">
+        <a class="back" onclick="window.location.href='lostandfound.html'">
+            <i class="fa-solid fa-2x fa-arrow-left"></i>
+        </a>
     </div>
-	<div class="container">
-		<div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='BUY.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div>
-		
-        <div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div><div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div>v<div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div><div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div><div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div><div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div><div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div><div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div><div class="product">
-			<img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product 1">
-			<div class="button">
-            <button class="buy-now" onclick="window.location.href='found.html'">FOUND</button>
-            <button class="info" onclick="window.location.href='iteminfo.html'">INFO</button>
-        </div>
-		</div>
-	</div>
-
-    <nav class="navbar">
-      <a class="home" onclick="window.location.href='home.html'">
-        <i class="fa-2x fa-solid fa-house" data-name="HOME"></i>
-      </a>
-      <button class="claims-button" onclick="window.location.href='claims.html'">
-        CLAIMS
-      </button>
-      <button class="sell-button" onclick="window.location.href='lost.html'">
-        LOST
-      </button>
-      <a class="back" onclick="window.location.href='home.html'">
-        <i class="fa-2x fa-solid fa-arrow-left" data-name="BACK"></i>
-      </a>
-    </nav>
     <script src="https://kit.fontawesome.com/7c8045b6c0.js" crossorigin="anonymous"></script>
-
-</body>
+  </body>
 </html>
