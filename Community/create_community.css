@@ -2,29 +2,26 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     margin: 7vh;
-    background-color: rgb(247, 236, 200);
-    color: black;
+   
+    color: #fff;
     display: flex;
+}
+.backvideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 .container{
     display: flex;
     flex-direction: column;
     margin: auto;
+    background-color: rgb(0, 0, 0,0.5);
     justify-content: center;
     align-items: center;
-   
+    height: 80vh;
+    width: 60%;
 }
-.container h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.box{
-    width: 500px;
-  height: 300px;
-  padding: 15px;
-  background-color: rgb(66, 134, 143);
-  box-shadow: 10px 10px ;
-}
-
 h1{
     font-size: 50px;
     text-transform: uppercase;
@@ -39,53 +36,28 @@ h1{
 }
 button{
     height: 8vh;
-    width: 20vh;
+    width: 40vh;
     border-radius: 50px;
-    background-color: black;
-    border: rgb(199, 243, 185) solid 1px;
-    color: rgb(137, 211, 221);
+    background-color: transparent;
+    border: #F8F9FA solid 1px;
+    color: #F8F9FA;
     margin:0 2vh;
     transition: 0.5s;
     transition-property: all;
     text-transform: uppercase;
     margin: 2vh;
+    justify-self: center;
+    align-self: center;
 }
 button:hover{
-    background-color: bisque;
-    color: #000000;
-    border: #000000 solid 1px;
+    background-color: rgb(248, 249, 250,0.2);
+    
+    border: #F8F9FA solid 1px;
 }
 input{
     height: 28px;
-    width: 300px;
+    width: 500px;
     display: grid;
-    align-items: center;
-    font-size: 20px;
     
        
-}
-.back{
-    position:absolute;
-    top:0;
-    right:0;
-    margin-top: 12px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.home{
-    position:absolute;
-    top:0;
-    right:0;
-    margin-top: 10px;
-    margin-right: 80px;
-    cursor: pointer;
-}
-
-a i{
-    transition:transform 0.2s ease-in-out;
-
-}
-a:hover i{
-    transform:translateY(-5px);
-
 }
