@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 
-header("Location: index1.html");
+header("Location: index.php");
 exit();
 
 ?>
