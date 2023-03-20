@@ -6,6 +6,9 @@
 	<title>Ordered Items</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
 	<style>
+    *{
+      background-color: rgb(215,245,250);
+    }
 		.item {
 			display: flex;
 			align-items: center;
@@ -72,6 +75,17 @@
   
   a:hover i {
 	transform: translateY(-5px);
+  }
+  .order{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .order i{
+margin-top: 15px;
+  }
+  .title{
+    margin-left: 33px;
   }
 	</style>
 </head>
@@ -158,6 +172,9 @@
 	</div>
   <a class="back" onclick="window.location.href='index1.html'">
     <i class="fa-2x fa-solid fa-arrow-left" ></i>
+  </a>
+  <a class="order">
+    <i class="fa-2x fa-solid fa-cart-shopping"></i>
   </a>
 </body>
 </html>
