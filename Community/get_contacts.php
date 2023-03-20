@@ -1,4 +1,7 @@
 <?php
+
+$name = $_GET['name'];
+
 // Connect to the MySQL database
 $host = "localhost";
 $username = "root";
@@ -13,7 +16,7 @@ if (mysqli_connect_errno()) {
 }
 
 // Query the database to retrieve the contacts data
-$query = "SELECT * FROM contacts";
+$query = "SELECT * FROM $name";
 $result = mysqli_query($conn, $query);
 
 // Store the contacts data in an array
