@@ -1,4 +1,7 @@
 <?php
+
+$product_name = $_GET['name'];
+
 // database connection details
 $host = "localhost";
 $username = "root";
@@ -6,7 +9,7 @@ $password = "";
 $dbname = "buyandsell";
 
 // establish connection
-$conn = new mysqli($host, $username, $password, $dbname);
+$conn = mysqli_connect($host, $username, $password, $dbname);
 
 // check connection
 if ($conn->connect_error) {
@@ -22,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $conn->real_escape_string($_POST["email"]);
 
   // prepare and execute SQL statement
-  $sql = "INSERT INTO customer_details (full_name, quantity, phone_no, email) VALUES ('$full_name', '$quantity', '$phone_no', '$email')";
+  $sql = "INSERT INTO customer_details (full_name, product_name, quantity, phone_no, email) VALUES ('$full_name', '$product_name' ,'$quantity', '$phone_no', '$email')";
   if ($conn->query($sql) === TRUE) {
     echo "Order placed successfully!";
   } else {
@@ -33,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // close connection
 $conn->close();
 
-header("Location: cart.html");
+header("Location: cart.php");
 exit();
 
 ?>
