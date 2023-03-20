@@ -1,4 +1,6 @@
 <?php
+
+$name = $_GET['name'];
 // Database connection information
 $servername = "localhost";
 $username = "root";
@@ -19,7 +21,7 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 
 // Create a new SQL statement to insert the data into the database
-$sql = "INSERT INTO contacts (name, email, phone) VALUES ('$name', '$email', '$phone')";
+$sql = "INSERT INTO $name (name, email, phone) VALUES ('$name', '$email', '$phone')";
 
 // Execute the SQL statement and check if it was successful
 if ($conn->query($sql) === TRUE) {
