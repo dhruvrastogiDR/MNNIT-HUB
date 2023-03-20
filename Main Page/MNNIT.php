@@ -23,12 +23,25 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body{
+        background-color: #a1b6ca;
+            font-family: 'Montserrat', sans-serif;
+            color: #F8F9FA;
+            display: flex;
+            flex-direction: column;
+      }
 
       #profile{
         width: 60px;
         border-radius:10000px;
       }
-     
+      .backvideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+        }
       .nav-item{
         align-items: flex-start;
         display: flex;
@@ -46,20 +59,41 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
         margin: 10px 10px;
       }
       .container{
-        background-color: bisque;
+        background-color: transparent;
       }
       .jumbotron{
-        background-color: rgb(131, 163, 163) ;
+        background-color: rgb(0, 0, 0,0.5) ;
       }
+      #buttn{
+        width: 20vh;
+        height: 5vh;
+        margin-top: 2vh;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        border: none;
+        justify-self: center;
+        align-self: center;
+        transition: 0.5s all;
+       }
+       #buttn:hover{
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 30vh;
+
+       }
+       .offcanvas{
+        background-color: #a1b6ca;
+       }
 
    
       </style>
 
 
-    <title>MNNIT HUB!</title>
+    <title>MNNIT HUB | MAIN</title>
   </head>
   <body>
-
+    <video autoplay loop muted plays-inline class="backvideo">
+        <source src="C:\Users\Driti\Downloads\waves-71122.mp4" type="video/mp4">
+    </video>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="MNNIT.php">MNNIT HUB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
@@ -132,8 +166,8 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
   <!-- <p class="lead">
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </p> -->
-  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" onclick="showDataProfile()" role="button" aria-controls="offcanvasExample">
-  MY Profile
+  <a class="btn btn-primary" id="buttn" data-bs-toggle="offcanvas" href="#offcanvasExample" onclick="showDataProfile()" role="button" aria-controls="offcanvasExample">
+  MY PROFILE
 </a>
 <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
   Button with data-bs-target
@@ -193,7 +227,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
   </div>
 </div>
 <div>
-      <h2>Here we are going to add imporatant updated and the things that are imporatant to the user</h2>
+      <h2>Here we are going to add imporatant updates and the things that are important to the user</h2>
 
 </div>
 
