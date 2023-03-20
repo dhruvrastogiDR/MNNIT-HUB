@@ -1,6 +1,6 @@
 <?php
 
-$name = $_GET['name'];
+$name1 = $_GET['name'];
 // Database connection information
 $servername = "localhost";
 $username = "root";
@@ -21,7 +21,7 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 
 // Create a new SQL statement to insert the data into the database
-$sql = "INSERT INTO $name (name, email, phone) VALUES ('$name', '$email', '$phone')";
+$sql = "INSERT INTO $name1 (name, email, phone) VALUES ('$name', '$email', '$phone')";
 
 // Execute the SQL statement and check if it was successful
 if ($conn->query($sql) === TRUE) {
@@ -33,7 +33,7 @@ if ($conn->query($sql) === TRUE) {
 // Close the database connection
 $conn->close();
 
-header("Location: index.html");
+header("Location: mhcommpage.php?name=$name1");
 exit();
 
 ?>
