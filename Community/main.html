@@ -59,7 +59,7 @@
       data.forEach(contact => {
         const contactElement = document.createElement('li');
         const contactLink = document.createElement('a');
-        contactLink.href = `mhcommpage.html?id=${contact.id}&name=${encodeURIComponent(contact.Tables_in_mnnithub)}`;
+        contactLink.href = `mhcommpage.php?id=${contact.id}&name=${encodeURIComponent(contact.Tables_in_mnnithub)}`;
         contactLink.textContent = contact.Tables_in_mnnithub;
         contactElement.appendChild(contactLink);
         contactsList.appendChild(contactElement);
