@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MNNIT HUB | COMMUNITY</title>
+    <title>Community | MNNIT HUB</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-        
         body{
           font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    margin: 7vh;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
+          font-size: 25px;
+          margin: 7vh;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
         h1{
             font-size: 50px;
             text-transform: uppercase;
+            background-color: transparent;
+            color: #fff;
+            border: #fff solid 1px;
         }
         button{
             width: 20vh;
@@ -25,71 +29,70 @@
             transition: 0.5s;
             transition-property: all;
             text-transform: uppercase;
-            background-color: transparent;
-            color: #fff;
-            border: #fff solid 1px;
         }
         button:hover{
+            /* background-color: #000; */
             background-color: rgb(255, 255, 255,0.5);
             color: #fff;
+            /* border: #000; */
             border: #fff solid 1px;
         }
         .backvideo{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        }
       </style>
   </head>
   <body>
     <video autoplay loop muted plays-inline class="backvideo">
-      <source src="C:\Users\Driti\Downloads\sea-6399.mp4" type="video/mp4">
+      <source src="..\Main Page\Images\sea-6399.mp4" type="video/mp4">
     </video>
     <h1>Welcome to Community of MNNIT HUB</h1>
-    <div class="container">
-      <p>Here you can create communities.</p>
+    <p>Here you can create communities.</p>
 
     <button onclick="create_community()">Create Contact</button>
 
+    <h2 id="communitylist">Community List</h2>
+
     <div id="community-list">
-      <h2>Contact List</h2>
       <button onclick="dofetchdata()">Show Communities</button>
       <ul>
         <!-- Contacts will be added dynamically using JavaScript -->
       </ul>
     </div>
-    </div>
 
     <script>
       // Fetch the contacts data from the PHP script
       function dofetchdata(){
-        fetch('get_communities.php')
+  fetch('get_communities.php')
     .then(response => response.json())
     .then(data => {
       //testing and debugging 
       console.log(data);
-    // Update the contact list on the page
-    const contactsList = document.getElementById('community-list');
-    contactsList.innerHTML = '';
-    data.forEach(contact => {
-      const contactElement = document.createElement('li');
-      const contactLink = document.createElement('a');
-      contactLink.href = `index.html?id=${contact.id}`;
-      contactLink.textContent = contact.name;
-      contactElement.appendChild(contactLink);
-      contactsList.appendChild(contactElement);
-    });
-  })
-  .catch(error => console.error(error));
-      }
+      // Update the contact list on the page
+      const contactsList = document.getElementById('community-list');
+      contactsList.innerHTML = '';
+      data.forEach(contact => {
+        const contactElement = document.createElement('li');
+        const contactLink = document.createElement('a');
+        contactLink.href = `mhcommpage.php?id=${contact.id}&name=${encodeURIComponent(contact.Tables_in_mnnithub)}`;
+        contactLink.textContent = contact.Tables_in_mnnithub;
+        contactElement.appendChild(contactLink);
+        contactsList.appendChild(contactElement);
+      });
+    })
+    .catch(error => console.error(error));
+}
+
   
 
     </script>
 
     <script>
         function create_community(){
-        window.location.href = "create_commmunity.html";
+        window.location.href = "create_community.html";
         }
     </script>
     <!-- <script src="script.js"></script> -->
