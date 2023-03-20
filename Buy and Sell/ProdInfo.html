@@ -88,7 +88,59 @@
     </div>
     <div class="container">
         <div class="product-info">
-            <img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product Image">
+          <?php 
+            $product_name1 = $_GET['name'];
+            $host = 'localhost';
+            $username = 'root';
+            $password = '';
+            $dbname = 'buyandsell';
+
+            // Create connection
+            $conn = new mysqli($host, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+            }
+
+            // SQL query to fetch products from the database
+            $sql = "SELECT * FROM products";
+            $result = $conn->query($sql);
+
+            // Fetch products and create HTML code for each product
+            $products_html = '';
+            if ($result->num_rows > 0) {
+              while ($row = $result->fetch_assoc()) {
+                $product_price = $row['price'];
+                $product_name = $row['name'];
+                $product_image = $row['image'];
+                $product_description = $row['description'];
+                $product_html = "
+                <img src=$product_image alt=\"Product Image\">
+                <div>
+                  <h2>Product Name : $product_name</h2>
+                  <p>Product Description : $product_description</p>
+                  <p>Price: $product_price</p>
+                  <!--<p>Dimensions: 10 x 5 x 3 inches</p>-->
+                  <!--<p>Weight: 1.5 pounds</p>-->
+                  <!--<p>Manufacturer: XYZ Corporation</p>-->
+                  <a onclick=\"window.location.href='BUY.php?name=$product_name'\">
+                    <button class=\"buy-now-button\">Buy Now</button>
+                  </a>
+                </div>
+                ";
+                if($product_name1==$product_name)
+                {
+                  $products_html .= $product_html;
+                }
+              }
+              echo $products_html;
+            }
+
+            // Close database connection
+            $conn->close();
+          ?>
+            <!-- <img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Product Image">
           <div>
             <h2>Product Name</h2>
             <p>Product Description</p>
@@ -96,14 +148,14 @@
             <p>Dimensions: 10 x 5 x 3 inches</p>
             <p>Weight: 1.5 pounds</p>
             <p>Manufacturer: XYZ Corporation</p>
-            <a onclick="window.location.href='BUY.html'">
+            <a onclick="window.location.href='BUY.php'">
               <button class="buy-now-button">Buy Now</button>
             </a>
-          </div>
+          </div> -->
         </div>
     </div>
     <div class="back">
-        <a class="back" onclick="window.location.href='index1.html'">
+        <a class="back" onclick="window.location.href='index.php'">
             <i class="fa-solid fa-2x fa-arrow-left"></i>
         </a>
     </div>
