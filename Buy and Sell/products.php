@@ -26,22 +26,21 @@ if ($result->num_rows > 0) {
     $product_image = $row['image'];
     $product_description = $row['description'];
     $product_html = "
-    <div class='product'>
     <div class='card' style='width: 18rem;'>
-  <img src='$product_image' class='card-img-top' alt='$product_name'>
+  <img src='sample.jpg' class='card-img-top' alt='$product_name'>
   <div class='card-body'>
     <h5 class='card-title'>$product_price</h5>
     <p class='card-text'>$product_name</p>
     <div class='button'>
-          <button class='buy-now' onclick='window.location.href=\"BUY.html\"'>Buy Now</button>
-          <button class='info' onclick='window.location.href=\"ProdInfo.html\"'>INFO</button>
+          <button class='buy-now' onclick='window.location.href=\"BUY.php?name=$product_name\"'>Buy Now</button>
+          <button class='info' onclick='window.location.href=\"ProdInfo.php?name=$product_name\"'>INFO</button>
         </div>
   </div>
-</div>
 </div>
     ";
     $products_html .= $product_html;
   }
+  echo $products_html;
 }
 
 // Close database connection
